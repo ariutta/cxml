@@ -54,8 +54,8 @@ export class Rule {
 		this.handler = handler;
 	}
 
-	addAttribute(ref: MemberRef) {
-		this.attributeTbl[ref.member.namespace.getPrefix() + ref.member.name] = ref;
+	addAttribute(ref: MemberRef, namespace: Namespace) {
+		this.attributeTbl[namespace.getPrefix() + ref.member.name] = ref;
 	}
 
 	addChild(ref: MemberRef) {

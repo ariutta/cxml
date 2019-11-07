@@ -173,7 +173,7 @@ export class TypeSpec extends Item {
 
 		for(spec of this.attributeSpecList) {
 			var attributeRef = MemberRef.parseSpec(spec, this.namespace);
-			if(attributeRef.member.typeSpecList) this.rule.addAttribute(attributeRef);
+			if(attributeRef.member.typeSpecList) this.rule.addAttribute(attributeRef, this.namespace);
 			this.defineMember(attributeRef);
 		}
 	}
